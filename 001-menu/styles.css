@@ -84,37 +84,5 @@
     opacity: 0;
   }
 }
-@keyframes animate-line-1-rev {
-  0% {
-    transform: translate3d(0, 22px, 0) rotate(45deg);
-  }
-  50% {
-    transform: translate3d(0, 22px, 0) rotate(0);
-  }
-  100% {
-    transform: translate3d(0, 0, 0) rotate(0);
-  }
-}
-@keyframes animate-line-3-rev {
-  0% {
-    transform: translate3d(0, 0, 0) rotate(0);
-  }
-  50% {
-    transform: translate3d(0, -22px, 0) rotate(0);
-  }
-  100% {
-    transform: translate3d(0, -22px, 0) rotate(135deg);
-  }
-}
-@keyframes animate-line-2-rev {
-  0% {
-    transform: scale(1);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(0);
-    opacity: 0;
-  }
-}
 
 /*# sourceMappingURL=styles.css.map */
