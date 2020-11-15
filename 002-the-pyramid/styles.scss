@@ -1,0 +1,161 @@
+// Variables
+$box-height-width: 400px;
+$center-height-width: ($box-height-width * 75)/100;
+$sky-height: ($center-height-width * 70)/100;
+$ground-height: ($center-height-width * 30)/100;
+$mountain-height: ($sky-height * 76)/100;
+$mountain-width: ($center-height-width * 90)/100;
+$sun-height-width: ($sky-height * 15)/100;
+
+.frame {
+  position: absolute;
+  background-color: black;
+  height: $box-height-width;
+  width: $box-height-width;
+  top: 50%;
+  left: 50%;
+  margin-top: -$box-height-width/2;
+  margin-left: -$box-height-width/2;
+}
+
+.center {
+  position: absolute;
+  height: $center-height-width;
+  width: $center-height-width;
+  margin-top: -$center-height-width/2;
+  margin-left: -$center-height-width/2;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.sky {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  background: #7ddffc;
+  height: $sky-height;
+  background: #7ddffc;
+}
+
+.ground {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: $ground-height;
+  background: #f0de75;
+}
+
+.left-mountain {
+  position: absolute;
+  clip-path: polygon(53% 39%, 20% 111%, 62% 117%);
+  left: 50px;
+  top: 50px;
+  right: 20px;
+  height: $mountain-height;
+  width: $mountain-width;
+  background: #f4f4f4;
+  z-index: 4;
+}
+
+.right-mountain {
+  position: absolute;
+  clip-path: polygon(53% 39%, 51% 101%, 71% 105%);
+  left: 50px;
+  top: 50px;
+  right: 20px;
+  height: $mountain-height;
+  width: $mountain-width;
+  background: #dddada;
+  z-index: 4;
+}
+
+.sun {
+  position: absolute;
+  border-radius: 50%;
+  left: 150px;
+  top: 20px;
+  background: #ffef00;
+  height: $sun-height-width;
+  width: $sun-height-width;
+  z-index: 5;
+  transform-origin: 100% 800%;
+  animation: sun-anime 5s linear infinite;
+}
+
+.shadow {
+  position: absolute;
+  z-index: 3;
+  height: $mountain-height;
+  left: 113px;
+  bottom: 37px;
+  width: 166px;
+  background: rgba(0, 0, 0, 0.2);
+  clip-path: polygon(100% 90%, 3% 67%, 74% 66%);
+  animation: shadow-anime 5s linear infinite;
+}
+
+.ground {
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 91px;
+  background: #f0de75;
+  animation: fading-sand 4s linear infinite;
+}
+
+@keyframes shadow-anime {
+  0% {
+    clip-path: polygon(100% 90%, 3% 67%, 74% 66%);
+  }
+
+  50% {
+    clip-path: polygon(65% 90%, 3% 67%, 74% 66%);
+  }
+
+  75% {
+    clip-path: polygon(31% 92%, 3% 67%, 74% 66%);
+  }
+
+  100% {
+    clip-path: polygon(0 92%, 3% 67%, 74% 67%);
+  }
+}
+
+@keyframes fading-sand {
+  0% {
+    background: #272c34;
+  }
+
+  30% {
+    background: #f0de75;
+  }
+
+  70% {
+    background: #f0de75;
+  }
+
+  100% {
+    background: #272c34;
+  }
+}
+
+@keyframes sun-anime {
+  0% {
+    transform: rotate(-70deg);
+  }
+
+  30% {
+    transform: rotate(-28deg);
+  }
+
+  100% {
+    transform: rotate(+70deg);
+  }
+}
