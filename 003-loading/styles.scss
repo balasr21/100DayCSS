@@ -1,0 +1,100 @@
+// Variables
+$box-height-width: 400px;
+$center-box-height-width: 90px;
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: $box-height-width;
+  height: $box-height-width;
+  margin-top: -$box-height-width/2;
+  margin-left: -$box-height-width/2;
+  background: #e56262;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: $center-box-height-width;
+  width: $center-box-height-width;
+  margin-top: -$center-box-height-width/2;
+  margin-left: -$center-box-height-width/2;
+
+  .dot-1 {
+    position: absolute;
+    height: $center-box-height-width/3;
+    width: $center-box-height-width/3;
+    margin-top: $center-box-height-width/3;
+    margin-left: $center-box-height-width/3;
+    border-radius: 50%;
+    background: #fff;
+    z-index: 3;
+    animation-fill-mode: both;
+    animation: jump1 2s ease-in alternate infinite;
+  }
+
+  .dot-2 {
+    position: absolute;
+    height: $center-box-height-width/2;
+    width: $center-box-height-width/2;
+    margin-top: ($center-box-height-width/2)/2;
+    margin-left: ($center-box-height-width/2)/2;
+    border-radius: 50%;
+    background: #fff;
+    animation-fill-mode: both;
+    z-index: 2;
+    animation: jump2 2s ease-in alternate infinite;
+  }
+
+  .dot-3 {
+    position: absolute;
+    height: $center-box-height-width;
+    width: $center-box-height-width;
+    border-radius: 50%;
+    background: #fff;
+    animation-fill-mode: both;
+    z-index: 1;
+    animation: jump3 2s ease-in alternate infinite;
+  }
+}
+
+@keyframes jump1 {
+  0%,
+  70% {
+    box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.2);
+    transform: scale(0);
+  }
+
+  100% {
+    box-shadow: 10px 10px 15px 0 rgba(0, 0, 0, 0.3);
+    transform: scale(1);
+  }
+}
+
+@keyframes jump2 {
+  0%,
+  40% {
+    box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.2);
+    transform: scale(0);
+  }
+
+  100% {
+    box-shadow: 10px 10px 15px 0 rgba(0, 0, 0, 0.3);
+    transform: scale(1);
+  }
+}
+
+@keyframes jump3 {
+  0%,
+  10% {
+    box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.2);
+    transform: scale(0);
+  }
+
+  100% {
+    box-shadow: 10px 10px 15px 0 rgba(0, 0, 0, 0.3);
+    transform: scale(1);
+  }
+}
