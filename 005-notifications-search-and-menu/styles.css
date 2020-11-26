@@ -55,6 +55,11 @@
   left: 13px;
   top: 3;
 }
+.center .header .notification-menu:hover .line-top,
+.center .header .notification-menu:hover .line-bottom,
+.center .header .notification-menu:hover .circle {
+  background: #fff;
+}
 .center .header .search-icon {
   position: absolute;
   top: 26px;
@@ -63,6 +68,9 @@
   width: 11px;
   cursor: pointer;
   background: #b2daff;
+}
+.center .header .search-icon:hover {
+  background: #fff;
 }
 .center .header .title {
   display: block;

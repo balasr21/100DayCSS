@@ -61,6 +61,14 @@ $box-height-width: 400px;
         left: 13px;
         top: 3;
       }
+
+      &:hover {
+        .line-top,
+        .line-bottom,
+        .circle {
+          background: #fff;
+        }
+      }
     }
 
     .search-icon {
@@ -71,6 +79,10 @@ $box-height-width: 400px;
       width: 11px;
       cursor: pointer;
       background: #b2daff;
+
+      &:hover {
+        background: #fff;
+      }
     }
 
     .title {
