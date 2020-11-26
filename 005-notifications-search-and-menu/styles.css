@@ -55,6 +55,15 @@
   left: 13px;
   top: 3;
 }
+.center .header .search-icon {
+  position: absolute;
+  top: 26px;
+  right: 15px;
+  height: 11px;
+  width: 11px;
+  cursor: pointer;
+  background: #b2daff;
+}
 .center .header .title {
   display: block;
   text-align: center;
@@ -64,15 +73,15 @@
   line-height: 60px;
 }
 .center .header .search-item {
+  position: absolute;
+  top: 23px;
+  left: 50px;
   border-radius: 15px;
   background: #fff;
+  z-index: -2;
 }
-.center .header .search-icon {
-  position: absolute;
-  cursor: pointer;
-  right: 20px;
-  top: 18px;
-  background: #b2daff;
+.center .header .search-item.active {
+  z-index: 1;
 }
 .center .notifications {
   height: 240px;
