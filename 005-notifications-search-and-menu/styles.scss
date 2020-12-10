@@ -100,10 +100,15 @@ $box-height-width: 400px;
       left: 50px;
       border-radius: 15px;
       background: #fff;
-      z-index: -2;
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.3s ease-in-out;
+      transform: translateX(15px);
 
       &.active {
-        z-index: 1;
+        opacity: 1;
+        transform: translateX(0);
+        pointer-events: all;
       }
     }
   }
@@ -129,6 +134,11 @@ $box-height-width: 400px;
       padding-top: 10px;
       padding-bottom: 5px;
       box-sizing: border-box;
+
+      &:hover {
+        color: #5f98cd;
+        cursor: pointer;
+      }
     }
 
     .notification-circle {

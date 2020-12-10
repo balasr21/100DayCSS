@@ -86,10 +86,15 @@
   left: 50px;
   border-radius: 15px;
   background: #fff;
-  z-index: -2;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease-in-out;
+  transform: translateX(15px);
 }
 .center .header .search-item.active {
-  z-index: 1;
+  opacity: 1;
+  transform: translateX(0);
+  pointer-events: all;
 }
 .center .notifications {
   height: 240px;
@@ -111,6 +116,10 @@
   padding-top: 10px;
   padding-bottom: 5px;
   box-sizing: border-box;
+}
+.center .notifications .notification:hover {
+  color: #5f98cd;
+  cursor: pointer;
 }
 .center .notifications .notification-circle {
   position: absolute;
